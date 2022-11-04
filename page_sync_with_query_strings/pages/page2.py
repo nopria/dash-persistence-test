@@ -6,7 +6,7 @@ import config
 
 dash.register_page(__name__, path="/page2")
 
-def layout(year=None):
+def layout(year=None, **other_unknown_query_strings):
     print(year,hasattr(config.app_spanning_input, 'value')) # line for debug purposes
     if year is None:
         config.app_spanning_input.value = config.app_spanning_input.initial
